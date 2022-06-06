@@ -1,0 +1,42 @@
+{
+    "name": "nestmysql",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "engines": {
+        "node": "16"
+    },
+    "dependencies": {
+        "@nestjs/common": "^8.4.5",
+        "@nestjs/core": "^8.4.5",
+        "@nestjs/platform-fastify": "^8.4.5",
+        "mysql2": "^2.3.3",
+        "reflect-metadata": "^0.1.13",
+        "rxjs": "^7.5.5"
+    },
+    "devDependencies": {
+        "@nestjs/testing": "^8.4.6",
+        "@types/jest": "^28.1.1",
+        "@types/node": "^17.0.39",
+        "@typescript-eslint/eslint-plugin": "^5.27.0",
+        "@typescript-eslint/parser": "^5.27.0",
+        "eslint": "^8.17.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jest": "^26.5.1",
+        "jest": "^28.1.0",
+        "prettier": "^2.6.2",
+        "ts-jest": "^28.0.4",
+        "ts-node": "^10.8.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^4.7.3"
+    },
+    "scripts": {
+        "lint": "prettier -l ./src && eslint",
+        "fix": "prettier -w ./src && eslint --fix",
+        "test": "jest",
+        "dev": "ts-node-dev src/main.ts"
+    }
+}

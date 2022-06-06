@@ -1,0 +1,24 @@
+services:
+  db:
+    image: mysql:8.0.29-debian
+    container_name: nestmysql-container-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dbname
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      TZ: UTC
+      LANG: C.UTF-8
+    ports:
+      - 3306:3306
+    networks:
+      - default
+    platform: linux/amd64
+    volumes:
+      - ./.docker/db/conf:/etc/mysql/conf.d:ro
+      - ./.docker/db/init:/docker-entrypoint-initdb.d:ro
+      - ./.docker/db/logs:/var/log/mysql:rw
+
+networks:
+  default:
+    name: nestmysql-network-default
